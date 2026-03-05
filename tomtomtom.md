@@ -1,0 +1,2 @@
+Graphs
+A graph in computer science is a data strucutre it 'is made up of vertices and edges. it differs from a binary tree and linked list because each verticie can connect to more then verticie with more then one edge *insert image here labled edges and verticies*
