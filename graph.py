@@ -1,7 +1,11 @@
 # Graph
+
+# Adjacency matrix implementation
+class GRAPH_MATRIX:
+    pass
+
 # Adjacency list implementation
-        
-class GRAPH_ADJ:
+class GRAPH_LIST:
     def __init__(self):
         self.graph: dict[str, set[str]]
 
