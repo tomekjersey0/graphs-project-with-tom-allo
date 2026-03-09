@@ -7,6 +7,13 @@ A graph in computer science is a data structure made up of vertices and edges. I
 ![graph](images/graph.png)
 *insert image of weighted graph here, youve got it in one of your chat chats*
 
-graphs are represented differently in different codes:
-Python
+Example of graphs written in python when undirected, directed and when its weighted
+
+Undirected graph in Python
     graph = {"A":["B","C","D"],"B":["A","E"],"C":["A","D"],"D":["A","C","F"],"E":["B","G"],"F":["D"],"G":["E"]}
+
+Directed graph in python
+    graph = {"A":["B","C","D"],"B":["E"],"C":["D"],"D":["F"],"E":["G"],"F":[], "G":[]} 
+
+Weighted graph in python
+    graph = {"A":{"B":2,"C":6,"D":3}
