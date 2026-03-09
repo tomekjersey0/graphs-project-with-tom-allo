@@ -1,38 +1,34 @@
 # Graph
 # Adjacency list implementation
-
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.edges: list[int] = []
-
-    def set_value(self, value):
-        self.value = value
         
-    def add_edge(self, edge: int):
-        self.edges.append(edge)
-
-class Graph:
+class GRAPH_ADJ:
     def __init__(self):
-        self.vertices: list[Node]
-        self.edges: list[list[int]]
+        self.graph: dict[str, set[str]]
 
-    def add_vertex(self, value):
-        self.vertices.append(Node(value))
+    def add_vertex(self, v: str) -> None:
+        self.graph.setdefault(v, set())
 
-    def remove_vertex(self, index: int):
-        
+    def add_edge(self, a: str, b: str) -> None:
+        self.graph.setdefault(a, set()).add(b)
+
+    def remove_edge(self, a: str, b: str) -> None:
+        if a in self.graph:
+            self.graph[a].discard(b)
+            if not self.graph[a]:
+                del self.graph[a]
+
+    def remove_vertex(self, v: str) -> None:
+        if v in self.graph:
+            del self.graph[v]
+
+    def find_vertex(self, v: str) -> bool:
+        return True if v in self.graph else False
     
-    def add_edge(self, node_from: int, node_to: int):
+    def find_edge(self, a: str, b: str) -> bool:
+        neighbours: set[str] | None = self.graph.get(a)
+        if neighbours is None:
+            return False
+        return b in neighbours
 
-    def remove_edge(self, node_from: int, node_to: int):
-        
-    def find_vertex_by_index(self, index: int) -> list[Node] | list[None]:
-
-    def find_vertex_by_value(self, value: int) -> list[Node] | list[None]:
-
-    def find_edge(self, index_from: int, index_to: int) -> bool:
-
-    def path_exists_between(self, index_from: int, index_to: int) -> bool:
-
-    
+    def path_exists_between(self, a: str, b: str) -> bool:
+        pass
