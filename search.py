@@ -1,8 +1,9 @@
 import graph
 
-# TODO: Confirm return type / function of procedures
-def bfs(g: graph.GRAPH_LIST | graph.GRAPH_MATRIX, start: str):
+# return list of nodes in visitation order
+def bfs(g: graph.GRAPH_LIST | graph.GRAPH_MATRIX, start: str) -> list[str]:
     pass
 
-def dfs(g: graph.GRAPH_LIST | graph.GRAPH_MATRIX, start: str):
+# return list of nodes in visitation order
+def dfs(g: graph.GRAPH_LIST | graph.GRAPH_MATRIX, start: str) -> list[str]:
     pass
