@@ -16,14 +16,16 @@ class Graph:
     def __init__(self):
         self.vertices: list[Node]
         self.edges: list[list[int]]
+
+    def add_vertex(self, value):
+        self.vertices.append(Node(value))
+
+    def remove_vertex(self, index: int):
+        
     
     def add_edge(self, node_from: int, node_to: int):
 
     def remove_edge(self, node_from: int, node_to: int):
-
-    def add_vertex(self, value):
-
-    def remove_vertex(self, index: int):
         
     def find_vertex_by_index(self, index: int) -> list[Node] | list[None]:
 
