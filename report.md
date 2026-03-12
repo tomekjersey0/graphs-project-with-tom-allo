@@ -16,4 +16,4 @@ Directed graph in python
     graph = {"A":["B","C","D"],"B":["E"],"C":["D"],"D":["F"],"E":["G"],"F":[], "G":[]} 
 
 Weighted graph in python
-    graph = {"A":{"B":2,"C":6,"D":3}
+    graph = {"A":{"B":2,"C":6,"D":3}}
