@@ -17,3 +17,6 @@ Directed graph in python
 
 Weighted graph in python
     graph = {"A":{"B":2,"C":6,"D":3}}
+
+Weighted and directed graph in python
+    graph = {"A":{"B":2,"C":6,"D":3},"B":{"E":4},"C":{"D":1},"D":{"F":5},"E":{"G":3},"F":{},"G":{}}
