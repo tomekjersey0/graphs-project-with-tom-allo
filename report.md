@@ -4,8 +4,8 @@ A graph in computer science is a data structure made up of vertices and edges. I
    
  Graphs can either be directional or undirectional which one it is is decided whether there is an arrow on the edge or not, graphs can also be weighted which gives each edge a value showing the distance between vertex's
 
-![graph](images/graph.png)
-*insert image of weighted graph here, youve got it in one of your chat chats*
+<img src="images/graph.png" width="400px"> <img src="images/Undirected vs directed graphs comparison.png" width="400px">
+
 
 Example of graphs written in python when undirected, directed and when its weighted
 
