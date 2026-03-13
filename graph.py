@@ -1,9 +1,5 @@
 # Graph
 
-# Adjacency matrix implementation
-class GRAPH_MATRIX:
-    pass
-
 # Adjacency list implementation
 class GRAPH_LIST:
     def __init__(self):
