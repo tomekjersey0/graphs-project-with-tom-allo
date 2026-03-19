@@ -10,8 +10,11 @@ class GRAPH_LIST:
     def add_vertex(self, v: str) -> None:
         self.graph.setdefault(v, dict())
 
+    # Creates the vertex A if A does not exist
+    # Also creates the vertex B if B does not exist
     def add_edge(self, a: str, b: str) -> None:
         self.graph.setdefault(a, dict())[b] = None
+        self.add_vertex(b)
 
     def remove_edge(self, a: str, b: str) -> None:
         if a in self.graph:
