@@ -59,12 +59,25 @@ def t4():
 
     return search.bfs(g, 'a')
 
+def t5():
+    g = graph.GRAPH_LIST()
+    g.add_edge('a', 'a')
+
+    return search.bfs(g, 'a')
+
+def t6():
+    g = build_graph("abc","abbcca")
+
+    return search.bfs(g, 'a')
+    
 
 tests: list[Test] = [
     Test(t1,list("achdg")),
     Test(t2,[]),
     Test(t3,list("ac")),
-    Test(t4,list("ab"))
+    Test(t4,list("ab")),
+    Test(t5,['a']),
+    Test(t6,list("abc"))
 ]
 
 def run_tests(tests: list[Test]):
