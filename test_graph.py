@@ -59,5 +59,8 @@ g.add_edge("d","g")
 g.add_edge("f","a")
 g.add_edge("e","f")
 
+g2: graph.GRAPH_LIST = build_graph("askflahslgjkashgkljashgasj", "jkfabababababbababaabbahadskjghsdajkghsdkgjgkjhsdgjkldhlgkjsdhg")
+print(search.bfs(g2,"a"))
+
 ret = search.bfs(g,"a")
 print(ret)
