@@ -47,9 +47,16 @@ def t2():
 
     return search.bfs(g, "a")
 
+def t3():
+    g = build_graph("abc", "abacbabccacb")
+    g.remove_vertex("b")
+
+    return search.bfs(g, "a")
+
 tests: list[Test] = [
     Test(t1,list("achdg")),
-    Test(t2,[])
+    Test(t2,[]),
+    Test(t3,list("ac"))
 ]
 
 for i, t in enumerate(tests):
