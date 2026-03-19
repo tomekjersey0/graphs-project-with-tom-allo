@@ -1,6 +1,10 @@
+from colorama import Fore, init
 import search
 import graph
 from typing import Any
+
+# makes sure that after each coloured print, it returns back to normal.
+init(autoreset=True)
 
 class Test:
     def __init__(self, test, expected_output):
@@ -37,30 +41,21 @@ def t1():
     
     return search.bfs(g,"a")
 
-print(t1())
+def t2():
+    g = build_graph("", "")
+    g.remove_vertex("a")
 
-        
+    return search.bfs(g, "a")
 
-g = graph.GRAPH_LIST()
-g.add_vertex("a")
-g.add_vertex("b")
-g.add_vertex("c")
-g.add_vertex("d")
-g.add_vertex("e")
-g.add_vertex("f")
-g.add_vertex("g")
-g.add_vertex("h")
-g.add_edge("a","c")
-g.add_edge("c","a")
-g.add_edge("f","a")
-g.add_edge("h","d")
-g.add_edge("a","h")
-g.add_edge("d","g")
-g.add_edge("f","a")
-g.add_edge("e","f")
+tests: list[Test] = [
+    Test(t1,list("achdg")),
+    Test(t2,[])
+]
 
-g2: graph.GRAPH_LIST = build_graph("askflahslgjkashgkljashgasj", "jkfabababababbababaabbahadskjghsdajkghsdkgjgkjhsdgjkldhlgkjsdhg")
-print(search.bfs(g2,"a"))
-
-ret = search.bfs(g,"a")
-print(ret)
+for i, t in enumerate(tests):
+    result, out = t.run()
+    if result:
+        print(f"{Fore.GREEN}Test {i+1} PASSED. Returns: {out}, expected: {t.exp}")
+    else:
+        print(f"{Fore.RED}Test {i+1} FAILED. Returns: {out}, expected: {t.exp}")
+    
