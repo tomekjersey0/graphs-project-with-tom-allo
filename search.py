@@ -5,6 +5,8 @@ from typing import Any
 # return list of nodes in visitation order
 
 def bfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
+    g.clean_graph()
+
     if not g.find_vertex(start):
         return []
 
@@ -16,7 +18,7 @@ def bfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
         if cur not in visited:
             visited[cur] = None
             for n in g.graph.get(cur, {}):
-                if n not in visited and n in g.graph:
+                if n not in visited:
                     q.append(n)
     
     return list(visited)
