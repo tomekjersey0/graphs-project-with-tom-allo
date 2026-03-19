@@ -85,6 +85,29 @@ def t8():
     g = build_graph("abch","ab")
 
     return g.path_exists_between('a','h')
+
+# DFS: Linear path
+def t9():
+    # a -> b -> c -> d
+    g = build_graph("abcd", "abbccd")
+    return search.dfs(g, "a")
+
+# DFS: Branching (Deep Dive)
+def t10():
+    # a connects to b and c. b connects to d.
+    # DFS should go a -> b -> d -> c (completely finishing b's branch first)
+    g = build_graph("abcd", "abacbd")
+    return search.dfs(g, "a")
+
+# DFS: Cycle handling
+def t11():
+    g = build_graph("abc", "abbcca")
+    return search.dfs(g, "a")
+
+# DFS: Unreachable node
+def t12():
+    g = build_graph("abc", "ab") # c is isolated
+    return "c" in search.dfs(g, "a")
     
 
 tests: list[Test] = [
@@ -95,7 +118,11 @@ tests: list[Test] = [
     Test(t5,['a']),
     Test(t6,list("abc")),
     Test(t7,True),
-    Test(t8,False)
+    Test(t8,False),
+    Test(t9, list("abcd")),
+    Test(t10, list("abdc")),
+    Test(t11, list("abc")),
+    Test(t12, False)
 ]
 
 def run_tests(tests: list[Test]):
