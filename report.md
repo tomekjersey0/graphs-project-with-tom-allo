@@ -10,6 +10,7 @@ Graphs differ from binary trees and linked lists because each vertex can connect
 
 **Undirected Graphs** have edges with no direction—a connection between A and B means you can travel both ways. The edges are shown as plain lines. Undirected graphs are used in social networks (friendships), road networks where you can travel in both directions, and collaborations. For example, if A is friends with B, then B is friends with A.
 
+
 **Directed Graphs** have edges with direction, shown as arrows. An edge from A to B does not necessarily mean there's an edge from B to A. Directed graphs are used in social networks (followers), task dependencies, and web page links. For example, A can follow B on Twitter, but B doesn't necessarily follow A back.
 
 ## Weighted vs Unweighted Graphs
@@ -41,10 +42,17 @@ Weighted and directed graph in python
 ```
 graph = {"A":{"B":2,"C":6,"D":3},"B":{"E":4},"C":{"D":1},"D":{"F":5},"E":{"G":3},"F":{},"G":{}}
 ```
+![undirected graphs](graph.png)
 
-## Adjacency lsit vs Adjacency matrix
+![undirected graphs](image.png)
+## Adjacency list vs Adjacency matrix
 
-**Adjacency lists** are typical wa
+Graphs are typically stored as objects or dictionaries known as **adjacency lists** they can also be stored as a 2D array or a list of lists. This implementation is known as an **adjacency matrix** with rows and columns representing verticies and edges. An example of an adjacency matrix for the undirected graph is shown below
+
+
+
+
+
 
 ## Real-world applications
 
