@@ -41,3 +41,14 @@ Weighted and directed graph in python
 ```
 graph = {"A":{"B":2,"C":6,"D":3},"B":{"E":4},"C":{"D":1},"D":{"F":5},"E":{"G":3},"F":{},"G":{}}
 ```
+
+## Adjacency lsit vs Adjacency matrix
+
+**Adjacency lists** are typical wa
+
+## Real-world applications
+
+
+## traversal concepts
+
+
