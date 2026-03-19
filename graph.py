@@ -16,8 +16,6 @@ class GRAPH_LIST:
     def remove_edge(self, a: str, b: str) -> None:
         if a in self.graph:
             del self.graph[a][b]
-            if not self.graph[a]:
-                del self.graph[a]
 
     def remove_vertex(self, v: str) -> None:
         if v in self.graph:
