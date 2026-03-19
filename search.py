@@ -27,4 +27,19 @@ def bfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
 
 # return list of nodes in visitation order
 def dfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
-    return []
+    if not g.find_vertex(start):
+        return []
+    
+    visited = []
+
+    def explore(current_node):
+        visited.append(current_node)
+
+        for n in g.graph.get(current_node, {}):
+            if n not in visited:
+                explore(n)
+    
+    explore(start)
+    return visited
+
+        
