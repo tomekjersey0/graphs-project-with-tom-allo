@@ -73,6 +73,18 @@ def t6():
     g = build_graph("abc","abbcca")
 
     return search.bfs(g, 'a')
+
+# Path exists
+def t7():
+    g = build_graph("abcdefg","abbccdafagefedda")
+
+    return g.path_exists_between('a','d')
+
+# Path doesn't exists
+def t8():
+    g = build_graph("abch","ab")
+
+    return g.path_exists_between('a','h')
     
 
 tests: list[Test] = [
@@ -81,7 +93,9 @@ tests: list[Test] = [
     Test(t3,list("ac")),
     Test(t4,list("ab")),
     Test(t5,['a']),
-    Test(t6,list("abc"))
+    Test(t6,list("abc")),
+    Test(t7,True),
+    Test(t8,False)
 ]
 
 def run_tests(tests: list[Test]):
