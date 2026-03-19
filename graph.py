@@ -7,6 +7,9 @@ class GRAPH_LIST:
     def __init__(self):
         self.graph: dict[str, dict[str, Any]] = {}
 
+
+    # Adds vertex V to the graph
+    # If V already exists, adds nothing
     def add_vertex(self, v: str) -> None:
         self.graph.setdefault(v, dict())
 
@@ -16,10 +19,13 @@ class GRAPH_LIST:
         self.graph.setdefault(a, dict())[b] = None
         self.add_vertex(b)
 
+    # Removes the Edge A -> B if the edge exists
     def remove_edge(self, a: str, b: str) -> None:
         if a in self.graph:
             del self.graph[a][b]
 
+    # Removes the vertex A if it exists
+    # Any edges pointing to A remain in the graph
     def remove_vertex(self, v: str) -> None:
         if v in self.graph:
             del self.graph[v]
@@ -32,5 +38,3 @@ class GRAPH_LIST:
 
     def path_exists_between(self, a: str, b: str) -> bool:
         return True
-
-# im gonna wanna delete this commit
