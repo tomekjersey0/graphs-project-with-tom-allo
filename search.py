@@ -9,7 +9,7 @@ def bfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
     q = deque([start])
 
     while q:
-        cur = q.popLeft()
+        cur = q.popleft()
         if cur not in visited:
             visited[cur] = None
             for n in g.graph.get(cur, {}):
