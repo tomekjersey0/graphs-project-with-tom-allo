@@ -1,4 +1,5 @@
 from typing import Any
+from collections import deque
 
 # Graph
 
@@ -6,7 +7,6 @@ from typing import Any
 class GRAPH_LIST:
     def __init__(self):
         self.graph: dict[str, dict[str, Any]] = {}
-
 
     # Adds vertex V to the graph
     # If V already exists, adds nothing
@@ -46,11 +46,33 @@ class GRAPH_LIST:
             for d in to_del:
                 self.graph[v].pop(d)
 
+    # Checks if a vertex exists in the graph
     def find_vertex(self, v: str) -> bool:
         return True if v in self.graph else False
     
+    # Checks if an edge exists in the graph
     def find_edge(self, a: str, b: str) -> bool:
         return b in self.graph.get(a, {})
 
+    # Checks if there exists a path between two vertices
     def path_exists_between(self, a: str, b: str) -> bool:
-        return True
+        if a not in self.graph or b not in self.graph:
+            return False
+        
+        if a == b:
+            return True
+        
+        visited = set([a])
+        q = deque([a])
+
+        while q:
+            cur = q.popleft()
+            if cur == b:
+                return True
+            for e in self.graph[cur]:
+                if e == b:
+                    return True
+                if e not in visited:
+                    q.append(e)
+                    visited.add(e)
+        return False
