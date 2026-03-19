@@ -16,7 +16,7 @@ def bfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
         if cur not in visited:
             visited[cur] = None
             for n in g.graph.get(cur, {}):
-                if n not in visited:
+                if n not in visited and n in g.graph:
                     q.append(n)
     
     return list(visited)
