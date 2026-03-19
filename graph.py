@@ -30,6 +30,22 @@ class GRAPH_LIST:
         if v in self.graph:
             del self.graph[v]
 
+    # Removes any stale edges
+    # If there are edges pointing to vertices that don't exist,
+    # removes them from the graph
+    def clean_graph(self) -> None:
+        exist: set[str] = set(self.graph.keys())
+
+        for v in self.graph:
+            to_del = set()
+
+            for e in self.graph[v]:
+                if e not in exist:
+                    to_del.add(e)
+
+            for d in to_del:
+                self.graph[v].pop(d)
+
     def find_vertex(self, v: str) -> bool:
         return True if v in self.graph else False
     
