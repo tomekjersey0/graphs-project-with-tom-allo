@@ -53,10 +53,18 @@ def t3():
 
     return search.bfs(g, "a")
 
+def t4():
+    g = graph.GRAPH_LIST()
+    g.add_edge('a', 'b')
+
+    return search.bfs(g, 'a')
+
+
 tests: list[Test] = [
     Test(t1,list("achdg")),
     Test(t2,[]),
-    Test(t3,list("ac"))
+    Test(t3,list("ac")),
+    Test(t4,list("ab"))
 ]
 
 for i, t in enumerate(tests):
