@@ -11,7 +11,7 @@ class Test:
         out = self.test()
         return (out == self.exp, out)
 
-def build_graph(vertices: str, edges: str) -> graph:
+def build_graph(vertices: str, edges: str) -> graph.GRAPH_LIST:
     vs = vertices
     vs_d = set(list(vs))
     es = list(edges)
