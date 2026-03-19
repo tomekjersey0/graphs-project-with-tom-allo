@@ -13,7 +13,7 @@ class Test:
 
     def run(self) -> tuple[Any, bool]:
         out = self.test()
-        return (out == self.exp, out)
+        return out == self.exp, out
 
 def build_graph(vertices: str, edges: str) -> graph.GRAPH_LIST:
     vs = vertices
@@ -67,8 +67,27 @@ tests: list[Test] = [
     Test(t4,list("ab"))
 ]
 
-for i, t in enumerate(tests):
-    result, out = t.run()
+def run_tests(tests: list[Test]):
+    results = []
+    for i, t in enumerate(tests):
+        result, out = t.run()
+
+        results.append({
+            "idx":i,
+            "result":result,
+            "out":out,
+            "test":t
+        })
+    
+    return results
+
+results = run_tests(tests)
+
+for r in results:
+    result = r["result"]
+    i = r["idx"]
+    out = r["out"]
+    t = r["test"]
     if result:
         print(f"{Fore.GREEN}Test {i+1} PASSED. Returns: {out}, expected: {t.exp}")
     else:
