@@ -27,6 +27,8 @@ def bfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
 
 # return list of nodes in visitation order
 def dfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
+    g.clean_graph()
+
     if not g.find_vertex(start):
         return []
     
