@@ -5,6 +5,9 @@ from typing import Any
 # return list of nodes in visitation order
 
 def bfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
+    if not g.find_vertex(start):
+        return []
+
     visited: dict[str, Any] = {}
     q = deque([start])
 
