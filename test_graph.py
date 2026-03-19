@@ -34,37 +34,41 @@ def build_graph(vertices: str, edges: str) -> graph.GRAPH_LIST:
     
     return g
 
+# Basic case
 def t1():
-    vs = "abcdefgh"
-    es = "accafahdahdgfaef"
-    g = build_graph(vs, es)
+    g = build_graph("abcdefgh", "accafahdahdgfaef")
     
     return search.bfs(g,"a")
 
+# Empty removal
 def t2():
     g = build_graph("", "")
     g.remove_vertex("a")
 
     return search.bfs(g, "a")
 
+# Removed vertex ignored in edge list
 def t3():
     g = build_graph("abc", "abacbabccacb")
     g.remove_vertex("b")
 
     return search.bfs(g, "a")
 
+# Vertex created on add_edge
 def t4():
     g = graph.GRAPH_LIST()
     g.add_edge('a', 'b')
 
     return search.bfs(g, 'a')
 
+# Self-loop
 def t5():
     g = graph.GRAPH_LIST()
     g.add_edge('a', 'a')
 
     return search.bfs(g, 'a')
 
+# Cycle
 def t6():
     g = build_graph("abc","abbcca")
 
