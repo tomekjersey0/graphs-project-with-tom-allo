@@ -42,9 +42,9 @@ Weighted and directed graph in python
 ```
 graph = {"A":{"B":2,"C":6,"D":3},"B":{"E":4},"C":{"D":1},"D":{"F":5},"E":{"G":3},"F":{},"G":{}}
 ```
-![undirected graphs](graph.png)
+![undirected graphs](images/graph.png)
 
-![undirected graphs](image.png)
+![undirected graphs](images/image.png)
 ## Adjacency list vs Adjacency matrix
 
 Graphs are typically stored as objects or dictionaries known as **adjacency lists** they can also be stored as a 2D array or a list of lists. This implementation is known as an **adjacency matrix** with rows and columns representing verticies and edges. An example of an adjacency matrix for the undirected graph is shown below
