@@ -1,23 +1,22 @@
 import graph
-import queue
+from collections import deque
 from typing import Any
 
 # return list of nodes in visitation order
 
 def bfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
     visited: dict[str, Any] = {}
+    q = deque([start])
 
-    cur = start
-    q = queue.Queue(maxsize=0)
-    q.put(cur)
-    while not q.empty():
-        cur = q.get()
+    while q:
+        cur = q.popLeft()
         if cur not in visited:
             visited[cur] = None
-            for n in g.graph[cur]:
-                q.put(n)
+            for n in g.graph.get(cur, {}):
+                if n not in visited:
+                    q.append(n)
     
-    return list(visited.keys())
+    return list(visited)
     
 
 
