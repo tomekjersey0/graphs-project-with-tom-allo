@@ -23,13 +23,13 @@ class GRAPH_LIST:
     def remove_edge(self, a: str, b: str) -> None:
         if a in self.graph:
             del self.graph[a][b]
-        self.clean_graph()
 
     # Removes the vertex A if it exists
     # Any edges pointing to A remain in the graph
     def remove_vertex(self, v: str) -> None:
         if v in self.graph:
             del self.graph[v]
+        self.clean_graph()
 
     # Removes any stale edges
     # If there are edges pointing to vertices that don't exist,
