@@ -21,7 +21,7 @@ class GRAPH_LIST:
 
     # Removes the Edge A -> B if the edge exists
     def remove_edge(self, a: str, b: str) -> None:
-        if a in self.graph:
+        if a in self.graph and b in self.graph[a]:
             del self.graph[a][b]
 
     # Removes the vertex A if it exists
