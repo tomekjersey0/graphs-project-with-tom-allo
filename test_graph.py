@@ -106,6 +106,11 @@ def t12():
     g = build_graph("abc", "ab") # c is isolated
     return "c" in search.dfs(g, "a")
     
+# Remove non-existant edge
+def t13():
+    g = build_graph("abc", "ab")
+    g.remove_edge("b","c")
+    return search.bfs(g,"a")
 
 tests: list[Test] = [
     Test(t1,list("achdg")),
@@ -119,7 +124,8 @@ tests: list[Test] = [
     Test(t9, list("abcd")),
     Test(t10, list("abdc")),
     Test(t11, list("abc")),
-    Test(t12, False)
+    Test(t12, False),
+    Test(t13, list("ab"))
 ]
 
 def run_tests(tests: list[Test]):
