@@ -43,7 +43,7 @@ Weighted and directed graph in python
 graph = {"A":{"B":2,"C":6,"D":3},"B":{"E":4},"C":{"D":1},"D":{"F":5},"E":{"G":3},"F":{},"G":{}}
 ```
 
-<img src="images/graph.png" width="400" height="250"/>
+<img src="images/graph.png" width="400" height="275"/>
 
 
 <img src="images/image.png" width="400" height="300"/>
