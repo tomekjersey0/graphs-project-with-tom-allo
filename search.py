@@ -28,16 +28,16 @@ def dfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
     if not g.find_vertex(start):
         return []
     
-    visited = []
+    visited = {}
 
     def explore(current_node):
-        visited.append(current_node)
+        visited[current_node] = None
 
         for n in g.graph.get(current_node, {}):
             if n not in visited:
                 explore(n)
     
     explore(start)
-    return visited
+    return list(visited.keys())
 
         
