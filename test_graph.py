@@ -1,10 +1,7 @@
-from colorama import Fore, init
+from colorama import init
 import search
 import graph
 from typing import Any
-
-# makes sure that after each coloured print, it returns back to normal.
-init(autoreset=True)
 
 class Test:
     def __init__(self, test, expected_output):
@@ -138,16 +135,3 @@ def run_tests(tests: list[Test]):
         })
     
     return results
-
-results = run_tests(tests)
-
-for r in results:
-    result = r["result"]
-    i = r["idx"]
-    out = r["out"]
-    t = r["test"]
-    if result:
-        print(f"{Fore.GREEN}Test {i+1} PASSED. Returns: {out}, expected: {t.exp}")
-    else:
-        print(f"{Fore.RED}Test {i+1} FAILED. Returns: {out}, expected: {t.exp}")
-    
