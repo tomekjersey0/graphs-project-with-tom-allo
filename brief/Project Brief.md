@@ -340,4 +340,3 @@ def dfs_iterative(graph, start_vertex):
 
 visited_nodes = dfs_iterative(GRAPH, "A")
 print("List of nodes visited:", visited_nodes)
-```
