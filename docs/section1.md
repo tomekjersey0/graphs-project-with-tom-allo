@@ -13,10 +13,76 @@ While a Linked List is a linear sequence where each vertex point to exactly one 
 
 ## Directed vs Undirected Graphs
 
-**Undirected Graphs** have edges with no direction—a connection between A and B means you can travel both ways. The edges are shown as plain lines. Undirected graphs are used in social networks (friendships), road networks where you can travel in both directions, and collaborations. For example, if A is friends with B, then B is friends with A.
+Graphs can be classified based on whether their edges have direction.
+
+### Undirected Graphs
+
+In an **undirected graph**, edges have no direction.  
+If there is an edge between A and B, the connection works both ways.
+
+Formally, an edge is represented as an **unordered pair**:
+(A, B) = (B, A)
+
+This means:
+- movement between vertices is symmetric
+- relationships are mutual
+
+Examples include:
+- friendships in social networks
+- physical connections like roads (when travel is possible both ways)
+
+In an adjacency list, undirected edges are typically stored twice:
+
+A -> B<br>
+B -> A
 
 
-**Directed Graphs** have edges with direction, shown as arrows. An edge from A to B does not necessarily mean there's an edge from B to A. Directed graphs are used in social networks (followers), task dependencies, and web page links. For example, A can follow B on Twitter, but B doesn't necessarily follow A back.
+
+---
+
+### Directed Graphs
+
+In a **directed graph (digraph)**, edges have a specific direction.
+
+An edge from A to B does **not** imply an edge from B to A.
+
+Formally, edges are **ordered pairs**:
+(A, B) ≠ (B, A)
+
+This means:
+- relationships are not necessarily mutual
+- traversal must follow edge direction
+
+Examples include:
+- social media followers (A follows B)
+- web links (page A links to page B)
+- task dependencies (A must happen before B)
+
+In an adjacency list, edges are stored only in one direction:
+
+A -> B
+
+
+---
+
+### Key Differences
+
+| Feature | Undirected Graph | Directed Graph |
+|--------|----------------|----------------|
+| Edge type | Unordered pair | Ordered pair |
+| Direction | None | One-way |
+| Symmetry | Yes | Not necessarily |
+| Storage | Two entries per edge | One entry per edge |
+
+---
+
+### Why This Matters
+
+The choice between directed and undirected graphs affects:
+
+- **Traversal**: In directed graphs, some vertices may not be reachable
+- **Pathfinding**: Direction restricts valid paths
+- **Representation**: Undirected graphs require storing edges twice in adjacency lists
 
 ## Weighted vs Unweighted Graphs
 
