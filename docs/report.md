@@ -6,7 +6,7 @@ This report explores the theory, implementation, and evaluation of graph data st
 
 ### What is a Graph?
 
-A graph is a non-linear data structure consisting of vertices (nodes) and edges, where vertices represent entities and edges represent relationships between them.
+A graph is a nonlinear data structure consisting of vertices (nodes), which represent discrete elements, and edges, which define the relationships between those elements.
 
 #### Key Distinctions
 
@@ -274,7 +274,7 @@ Graphs can be represented in multiple ways, the two most common being **adjacenc
 
 #### Adjacency List
 
-An **adjacency list** stores, for each vertex, a list (or dictionary) of its neighbouring vertices.
+An **adjacency list** stores, for each vertex, a collection (list or dictionary) of its neighbouring vertices. In this project, a dictionary-based structure is used.
 
 In Python, this is typically implemented using a dictionary:
 - keys represent vertices
@@ -348,7 +348,7 @@ The choice of representation affects both performance and usability:
 - **Adjacency matrices** are better when fast edge lookup is required  
 
 In this project, an adjacency list was chosen because:
-- the graph is relatively sparse  
+- the graph contains relatively few edges compared to the number of vertices
 - efficient traversal (BFS/DFS) is required  
 - it aligns naturally with Python dictionary structures  
 
@@ -533,6 +533,7 @@ DFS is implemented using **recursion**, which implicitly uses the call stack.
 - Explores full paths before moving to others
 - Does **not guarantee shortest paths**
 
+This difference in traversal strategy makes DFS more suitable for exhaustive exploration, while BFS is better suited for finding shortest paths in unweighted graphs.
 ---
 
 ### Path Existence Checking
@@ -707,6 +708,7 @@ The use of automated tests ensured consistency and allowed rapid validation afte
 An example screenshot of such test results is shown below:
 
 ![test result screenshot](images/test_result.png)
+
 ---
 
 ### BFS vs DFS Evaluation
@@ -744,6 +746,8 @@ In tests such as `t10`, DFS explores one branch fully before moving to another, 
 
 This comparison shows that both algorithms are suited to different types of problems.
 
+DFS is particularly useful in scenarios such as cycle detection, topological sorting, and exploring all possible paths. In practice, BFS is preferred when the shortest path is required, while DFS is more suitable when exploring all possible paths or analysing graph structure.
+
 ---
 
 ### Evaluation of Representation
@@ -779,7 +783,7 @@ The main operations have the following time complexities:
 - DFS traversal: O(V + E)  
 - Path existence check: O(V + E)  
 
-This shows that the implementation scales efficiently with graph size.
+These complexities arise because each vertex and edge is processed at most once during traversal. This shows that the implementation scales efficiently with graph size.
 
 ---
 
@@ -812,4 +816,4 @@ The testing process demonstrates that the graph implementation is correct, robus
 
 Both BFS and DFS are implemented effectively and behave as expected, and the chosen adjacency list representation provides an efficient and suitable structure for the problem.
 
-Overall, the system meets its objectives and provides a strong foundation for further extensions.
+Overall, the system meets its objectives and provides a strong foundation for extensions such as weighted graphs, shortest path algorithms, and graph visualisation.
