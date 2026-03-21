@@ -205,7 +205,8 @@ This matches the behaviour of a **directed graph**.
 
 --- 
 
-Weighted graph in python
+### Weighted Graph
+
 ```
 graph = {
     "A":{
@@ -215,6 +216,14 @@ graph = {
     }
 }
 ```
+
+In this case:
+- the value is a **dictionary instead of a list**
+- each neighbour is mapped to a **weight**
+
+This allows for storing additional information such as distance or cost.
+
+---
 
 Weighted and directed graph in python
 ```
