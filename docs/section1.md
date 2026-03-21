@@ -181,7 +181,10 @@ In this representation:
 
 This reflects the definition of an **undirected graph**
 
-Directed graph in python
+--- 
+
+### Directed Graph
+
 ```
 graph = {
     "A":["B","C","D"],
@@ -193,6 +196,14 @@ graph = {
     "G":[]
 } 
 ```
+
+Here:
+- edges are stored **in one direction**
+- for example, A -> B exists, but B -> A does not
+
+This matches the behaviour of a **directed graph**.
+
+--- 
 
 Weighted graph in python
 ```
