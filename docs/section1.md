@@ -244,10 +244,19 @@ This combines both concepts:
 
 ---
 
+### Visual Representation
+
+The diagrams below show how graph structures can be visualised.
+
+- Vertices are represented as nodes
+- Edges are shown as lines (or arrows for directed graphs)
+
 <img src="images/graph.png" width="400" height="275"/>
 
 
 <img src="images/image.png" width="400" height="300"/>
+
+These visual representations correspond directly to the adjacency list structures shown above.
 
 
 ## Adjacency list vs Adjacency matrix
