@@ -25,22 +25,52 @@ Below are Python code examples showing how to represent each type of graph using
 
 Undirected graph in Python
 ```
-graph = {"A":["B","C","D"],"B":["A","E"],"C":["A","D"],"D":["A","C","F"],"E":["B","G"],"F":["D"],"G":["E"]}
+graph = {
+    "A":["B","C","D"],
+    "B":["A","E"],
+    "C":["A","D"],
+    "D":["A","C","F"],
+    "E":["B","G"],
+    "F":["D"],
+    "G":["E"]
+}
 ```
 
 Directed graph in python
 ```
-graph = {"A":["B","C","D"],"B":["E"],"C":["D"],"D":["F"],"E":["G"],"F":[], "G":[]} 
+graph = {
+    "A":["B","C","D"],
+    "B":["E"],
+    "C":["D"],
+    "D":["F"],
+    "E":["G"],
+    "F":[], 
+    "G":[]
+} 
 ```
 
 Weighted graph in python
 ```
-graph = {"A":{"B":2,"C":6,"D":3}}
+graph = {
+    "A":{
+        "B":2,
+        "C":6,
+        "D":3
+    }
+}
 ```
 
 Weighted and directed graph in python
 ```
-graph = {"A":{"B":2,"C":6,"D":3},"B":{"E":4},"C":{"D":1},"D":{"F":5},"E":{"G":3},"F":{},"G":{}}
+graph = {
+    "A":{"B":2,"C":6,"D":3},
+    "B":{"E":4},
+    "C":{"D":1},
+    "D":{"F":5},
+    "E":{"G":3},
+    "F":{},
+    "G":{}
+}
 ```
 
 <img src="images/graph.png" width="400" height="275"/>
