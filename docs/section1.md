@@ -5,10 +5,11 @@
 A graph is a non-linear data structure consisting of vertices (representing individual data points or entities) and edges (the connections between them that represent relationships).
 
 ### Key Distinctions
-### Graphs vs. Trees
+
+#### Graphs vs. Trees
 A tree is a restricted type of graph with a hierarchical structure, no cycles, and a single root. In contrast, a general graph has no such restrictions and may contain cycles and multiple paths between vertices.
 
-### Graphs vs. Linked Lists
+#### Graphs vs. Linked Lists
 A linked list is a linear structure where each vertex typically connects to a single next element, forming a simple chain rather than a network.
 
 ## Directed vs Undirected Graphs
@@ -152,7 +153,8 @@ This distinction is important because it determines:
 
 ## Python Implementations
 
-Graphs can be represented in Python using an **adjacency list**, typically implemented with dictionaries.
+Graphs can be represented in Python using an **adjacency list**, typically implemented with dictionaries.  
+This is the representation used throughout the implementation in this project.
 
 In this structure:
 - each key represents a vertex
@@ -177,7 +179,7 @@ graph = {
 ```
 
 In this representation:
-- edges are stored **in both directions**
+- edges are stored **in both directions** in the adjacency list representation
 - if A is connected to B, then B is also connected to A
 
 This reflects the definition of an **undirected graph**
@@ -206,7 +208,7 @@ Here:
 - edges are stored **in one direction**
 - for example, A → B exists, but B → A does not
 
-This matches the behaviour of a **directed graph**.
+This reflects the definition of a **directed graph**, where connections are one-way.
 
 <img src="images/directed_graph_example.png" width="400"/>
 
@@ -257,7 +259,7 @@ This combines both concepts:
 
 <img src="images/weighted_and_directed_graph_example.png" width="400"/>
 
-This diagram shows both directions and weight (e.g. A → B with weight 2), matching the adjacency list where edges are stored as key-value pairs and only exist in one direction.
+This diagram shows both direction and weight (e.g. A → B with weight 2), matching the adjacency list where edges are stored as key-value pairs and only exist in one direction.
 ---
 
 ## Adjacency list vs Adjacency matrix
