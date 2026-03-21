@@ -33,9 +33,10 @@ Examples include:
 
 In an adjacency list, undirected edges are typically stored twice:
 
-A -> B<br>
-B -> A
-
+```
+A → B
+B → A
+```
 
 
 ---
@@ -59,9 +60,9 @@ Examples include:
 - task dependencies (A must happen before B)
 
 In an adjacency list, edges are stored only in one direction:
-
-A -> B
-
+```
+A → B
+```
 
 ---
 
@@ -183,7 +184,7 @@ This reflects the definition of an **undirected graph**
 
 <img src="images/undirected_graph_example.png" width="400"/>
 
-This diagram shows that each connection appears in both directions (e.g. A <--> B), matching how the adjacency list stores edges twice (A -> B and B -> A).
+This diagram shows that each connection appears in both directions (e.g. A ↔ B), matching how the adjacency list stores edges twice (A → B and B → A).
 
 --- 
 
@@ -203,13 +204,13 @@ graph = {
 
 Here:
 - edges are stored **in one direction**
-- for example, A -> B exists, but B -> A does not
+- for example, A → B exists, but B → A does not
 
 This matches the behaviour of a **directed graph**.
 
 <img src="images/directed_graph_example.png" width="400"/>
 
-This diagram shows that edges have direction (e.g. A -> B but not B -> A), matching the adjacency list where connections are only stored in one direction.
+This diagram shows that edges have direction (e.g. A → B but not B → A), matching the adjacency list where connections are only stored in one direction.
 
 --- 
 
@@ -256,7 +257,7 @@ This combines both concepts:
 
 <img src="images/weighted_and_directed_graph_example.png" width="400"/>
 
-This diagram shows both direction and weight (e.g. A → B with weight 2), matching the adjacency list where edges are stored as key-value pairs and only exist in one direction.
+This diagram shows both directions and weight (e.g. A → B with weight 2), matching the adjacency list where edges are stored as key-value pairs and only exist in one direction.
 ---
 
 ## Adjacency list vs Adjacency matrix
