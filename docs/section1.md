@@ -262,14 +262,91 @@ This combines both concepts:
 This diagram shows both direction and weight (e.g. A → B with weight 2), matching the adjacency list where edges are stored as key-value pairs and only exist in one direction.
 ---
 
-## Adjacency list vs Adjacency matrix
+## Adjacency List vs Adjacency Matrix
 
-Graphs are typically stored as objects or dictionaries known as **adjacency lists** they can also be stored as a 2D array or a list of lists. This implementation is known as an **adjacency matrix** with rows and columns representing verticies and edges. An example of an adjacency matrix for the undirected graph is shown below
+Graphs can be represented in multiple ways, the two most common being **adjacency lists** and **adjacency matrices**.
+
+---
+
+### Adjacency List
+
+An **adjacency list** stores, for each vertex, a list (or dictionary) of its neighbouring vertices.
+
+In Python, this is typically implemented using a dictionary:
+- keys represent vertices
+- values represent their neighbours
+
+This is the representation used throughout this project.
+
+Example:
+```
+A → [B, C, D]
+B → [A, E]
+```
+
+**Advantages:**
+- Efficient for **sparse graphs** (few edges)
+- Uses less memory (O(V + E))
+- Fast to iterate over neighbours
+
+**Disadvantages:**
+- Slower to check if a specific edge exists
+- Structure is slightly more complex than a matrix
+
+---
+
+### Adjacency Matrix
+
+An **adjacency matrix** is a 2D array where:
+- rows represent starting vertices
+- columns represent destination vertices
+
+A value indicates whether an edge exists (or stores a weight).
+
+Example:
+```
+    A B C D
+A [ 0 1 1 1 ]
+B [ 1 0 0 0 ]
+C [ 1 0 0 1 ]
+D [ 1 0 1 0 ]
+```
 
 
 <img src="images/table.png" width="400" height="300"/>
 
+**Advantages:**
+- Very fast edge lookup (O(1))
+- Simple and easy to understand
 
+**Disadvantages:**
+- Uses more memory (O(V²))
+- Inefficient for sparse graphs
+
+---
+
+### Key Differences
+
+| Feature | Adjacency List | Adjacency Matrix |
+|--------|----------------|------------------|
+| Storage | O(V + E) | O(V²) |
+| Edge lookup | Slower | Fast (O(1)) |
+| Memory use | Efficient | Expensive |
+| Best for | Sparse graphs | Dense graphs |
+
+---
+
+### Why This Matters
+
+The choice of representation affects both performance and usability:
+
+- **Adjacency lists** are better when the graph has relatively few edges  
+- **Adjacency matrices** are better when fast edge lookup is required  
+
+In this project, an adjacency list was chosen because:
+- the graph is relatively sparse  
+- efficient traversal (BFS/DFS) is required  
+- it aligns naturally with Python dictionary structures  
 
 ## Real-world applications
 graphs in computer science have many uses. For example mapping road netowrks for navigation systems, storing social network data, resource allocation in operatnig systems and many others.
