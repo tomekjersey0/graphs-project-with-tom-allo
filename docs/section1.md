@@ -225,7 +225,8 @@ This allows for storing additional information such as distance or cost.
 
 ---
 
-Weighted and directed graph in python
+### Weighted and Directed Graph
+
 ```
 graph = {
     "A":{"B":2,"C":6,"D":3},
@@ -237,6 +238,11 @@ graph = {
     "G":{}
 }
 ```
+This combines both concepts:
+- edges have direction
+- edges carry weights
+
+---
 
 <img src="images/graph.png" width="400" height="275"/>
 
