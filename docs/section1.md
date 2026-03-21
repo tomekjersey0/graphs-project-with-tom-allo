@@ -148,11 +148,21 @@ This distinction is important because it determines:
 - which algorithms are valid
 - how paths are evaluated
 - how the graph must be stored and processed
+
 ## Python Implementations
 
-Below are Python code examples showing how to represent each type of graph using an adjacency list (dictionary):
+Graphs can be represented in Python using an **adjacency list**, typically implemented with dictionaries.
 
-Undirected graph in Python
+In this structure:
+- each key represents a vertex
+- the value represents its neighbouring vertices
+
+This allows for efficient storage, especially for sparse graphs.
+
+--- 
+
+### Undirected Graph
+
 ```
 graph = {
     "A":["B","C","D"],
@@ -164,6 +174,12 @@ graph = {
     "G":["E"]
 }
 ```
+
+In this representation:
+- edges are stored **in both direction**
+- if A is connected to B, then B is also connected to A
+
+This reflects the definition of an **undirected graph**
 
 Directed graph in python
 ```
