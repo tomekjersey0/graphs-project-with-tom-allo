@@ -86,10 +86,68 @@ The choice between directed and undirected graphs affects:
 
 ## Weighted vs Unweighted Graphs
 
-**Unweighted Graphs** have edges with no associated value—they simply show whether a connection exists or not. These are used for finding any path between two points or checking if vertices are connected. For example, checking if there is a route between City A and City B.
+Graphs can also be classified based on whether edges carry additional values.
 
-**Weighted Graphs** have edges with associated values (weights) representing distance, cost, time, or strength of connection. These are used for finding shortest paths, minimizing costs, and optimization problems. For example, finding the shortest distance route from City A to City B or the cheapest flight connection.
+### Unweighted Graphs
 
+In an **unweighted graph**, edges do not store any additional information — they only represent whether a connection exists.
+
+This means:
+- all edges are treated equally
+- traversal is based purely on structure
+
+Unweighted graphs are typically used for:
+- checking connectivity between vertices
+- finding the shortest path in terms of **number of edges**
+
+For example, in a road network where all roads are considered equal, the goal might be to minimise the number of steps rather than distance.
+
+---
+
+### Weighted Graphs
+
+In a **weighted graph**, each edge has an associated value (weight).
+
+A weight represents a measurable quantity such as:
+- distance
+- time
+- cost
+- capacity
+
+This means:
+- edges are no longer equal
+- traversal must consider edge weights when determining optimal paths
+
+Weighted graphs are used in problems such as:
+- finding the shortest route (minimum distance)
+- minimising cost (e.g. cheapest flights)
+- optimising resource usage
+
+---
+
+### Key Differences
+
+| Feature | Unweighted Graph | Weighted Graph |
+|--------|----------------|----------------|
+| Edge value | None | Numerical weight |
+| Edge importance | All equal | Varies by weight |
+| Shortest path meaning | Fewest edges | Minimum total weight |
+| Algorithm used | BFS | Dijkstra’s algorithm (or similar) |
+
+---
+
+### Why This Matters
+
+The presence of weights changes how algorithms operate:
+
+- In an **unweighted graph**, BFS can be used to find the shortest path efficiently  
+- In a **weighted graph**, BFS is no longer sufficient, as it ignores weights  
+- Instead, algorithms such as **Dijkstra’s algorithm** are required  
+
+This distinction is important because it determines:
+- which algorithms are valid
+- how paths are evaluated
+- how the graph must be stored and processed
 ## Python Implementations
 
 Below are Python code examples showing how to represent each type of graph using an adjacency list (dictionary):
