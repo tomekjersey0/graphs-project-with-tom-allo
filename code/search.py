@@ -2,7 +2,7 @@ import graph
 from collections import deque
 from typing import Any
 
-# return list of nodes in visitation order
+# return list of vertices in visitation order
 
 def bfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
     if not g.find_vertex(start):
@@ -23,17 +23,17 @@ def bfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
     
 
 
-# return list of nodes in visitation order
+# return list of vertices in visitation order
 def dfs(g: graph.GRAPH_LIST, start: str) -> list[str]:
     if not g.find_vertex(start):
         return []
     
     visited = {}
 
-    def explore(current_node):
-        visited[current_node] = None
+    def explore(current_vertex):
+        visited[current_vertex] = None
 
-        for n in g.graph.get(current_node, {}):
+        for n in g.graph.get(current_vertex, {}):
             if n not in visited:
                 explore(n)
     

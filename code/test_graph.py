@@ -101,7 +101,7 @@ def t11():
     g = build_graph("abc", "abbcca")
     return search.dfs(g, "a")
 
-# DFS: Unreachable node
+# DFS: Unreachable vertex
 def t12():
     g = build_graph("abc", "ab") # c is isolated
     return "c" in search.dfs(g, "a")
