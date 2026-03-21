@@ -5,6 +5,17 @@ from collections import deque
 
 # Adjacency list implementation
 class GraphList:
+    """
+    Adjacency list representation of a directed graph.
+
+    - Vertices are stored as keys in a dictionary
+    - Edges are stored as nested dictionaries (neighbour → value)
+    - Edge values are unused (set to None), but allow extension to weighted graphs
+
+    This structure is efficient for sparse graphs and supports traversal algorithms
+    such as BFS and DFS.
+    """
+
     def __init__(self):
         self.graph: dict[str, dict[str, Any]] = {}
 
