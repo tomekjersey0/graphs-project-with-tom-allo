@@ -348,7 +348,67 @@ In this project, an adjacency list was chosen because:
 - efficient traversal (BFS/DFS) is required  
 - it aligns naturally with Python dictionary structures  
 
-## Real-world applications
-graphs in computer science have many uses. For example mapping road netowrks for navigation systems, storing social network data, resource allocation in operatnig systems and many others.
+## Real-World Applications of Graphs
+
+Graphs are widely used to model real-world systems where relationships between entities are important.
+
+---
+
+### Navigation and Road Networks
+
+In navigation systems, graphs are used to represent road networks.
+
+- **Vertices** represent locations (e.g. cities or intersections)
+- **Edges** represent roads connecting them
+- **Weights** can represent distance or travel time
+
+This allows algorithms to find the shortest or fastest route between two points.
+
+---
+
+### Social Networks
+
+Graphs are used to model relationships between people.
+
+- **Vertices** represent users
+- **Edges** represent relationships (e.g. friendships or followers)
+
+Directed graphs are often used for platforms like Twitter, where relationships are not always mutual.
+
+---
+
+### Computer Networks
+
+Graphs model how devices are connected in a network.
+
+- **Vertices** represent devices (e.g. routers or computers)
+- **Edges** represent communication links
+
+This helps in routing data efficiently and detecting network failures.
+
+---
+
+### Task Scheduling and Dependencies
+
+Graphs are used to represent dependencies between tasks.
+
+- **Vertices** represent tasks
+- **Edges** represent dependencies (A must be completed before B)
+
+These are typically **directed graphs**, and are used in:
+- project planning
+- build systems
+- operating systems
+
+---
+
+### Why Graphs Are Suitable
+
+Graphs are useful because they:
+- model relationships clearly
+- allow efficient traversal and pathfinding
+- can represent both simple and complex systems
+
+This makes them a flexible and powerful data structure for many real-world problems.
 
 ## traversal concepts
