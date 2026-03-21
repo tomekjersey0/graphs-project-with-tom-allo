@@ -796,7 +796,7 @@ Although the implementation is functional, several improvements could be made:
 
 ### Team Contribution
 
-The project was completed as a group, however responsibilities were divided unevenly.
+Responsibilities were divided based on strengths, with a primary focus on implementation and testing being handled independently, while initial theoretical content was developed collaboratively and later refined.
 
 I was primarily responsible for the design and implementation of the graph system in Section 2, including the adjacency list structure, BFS and DFS algorithms, and additional operations such as vertex/edge management and path checking. I also designed and implemented all test cases used in this section, including edge cases such as cycles, self-loops, and disconnected graphs.
 
