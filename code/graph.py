@@ -4,7 +4,7 @@ from collections import deque
 # Graph
 
 # Adjacency list implementation
-class GRAPH_LIST:
+class GraphList:
     def __init__(self):
         self.graph: dict[str, dict[str, Any]] = {}
 
@@ -24,8 +24,7 @@ class GRAPH_LIST:
         if a in self.graph and b in self.graph[a]:
             del self.graph[a][b]
 
-    # Removes the vertex A if it exists
-    # Any edges pointing to A remain in the graph
+    # Removes the vertex V and any edges pointing to it
     def remove_vertex(self, v: str) -> None:
         if v in self.graph:
             del self.graph[v]

@@ -12,12 +12,12 @@ class Test:
         out = self.test()
         return out == self.exp, out
 
-def build_graph(vertices: str, edges: str) -> graph.GRAPH_LIST:
+def build_graph(vertices: str, edges: str) -> graph.GraphList:
     vs = vertices
     vs_d = set(list(vs))
     es = list(edges)
     
-    g = graph.GRAPH_LIST()
+    g = graph.GraphList()
     for v in vs:
         g.add_vertex(v)
 
@@ -53,14 +53,14 @@ def t3():
 
 # Vertex created on add_edge
 def t4():
-    g = graph.GRAPH_LIST()
+    g = graph.GraphList()
     g.add_edge('a', 'b')
 
     return search.bfs(g, 'a')
 
 # Self-loop
 def t5():
-    g = graph.GRAPH_LIST()
+    g = graph.GraphList()
     g.add_edge('a', 'a')
 
     return search.bfs(g, 'a')
