@@ -413,7 +413,7 @@ Graphs are useful because they:
 - allow efficient traversal and pathfinding
 - can represent both simple and complex systems
 
-This makes them a flexible and powerful data structure for many real-world problems.They also allow the application of standard algorithms (such as BFS, DFS, and shortest path algorithms), making them highly practical.
+This makes them a flexible and powerful data structure for many real-world problems. They also allow the application of standard algorithms (such as BFS, DFS, and shortest path algorithms), making them highly practical.
 
 ## Section 2: Design and Implementation
 
