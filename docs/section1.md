@@ -2,7 +2,7 @@
 
 ## What is a Graph?
 
-A graph is a data structure consisting of vertices (or nodes), which are individual data points or entities, and edges, which are connections between vertices that represent relationships.
+A graph is a data structure consisting of vertices, which are individual data points or entities, and edges, which are connections between vertices that represent relationships.
 
 Graphs differ from binary trees and linked lists because each vertex can connect to multiple other vertices with multiple edges between them, creating more complex relationships.
 
@@ -15,7 +15,7 @@ Graphs differ from binary trees and linked lists because each vertex can connect
 
 ## Weighted vs Unweighted Graphs
 
-**Unweighted Graphs** have edges with no associated value—they simply show whether a connection exists or not. These are used for finding any path between two points or checking if nodes are connected. For example, checking if there is a route between City A and City B.
+**Unweighted Graphs** have edges with no associated value—they simply show whether a connection exists or not. These are used for finding any path between two points or checking if vertices are connected. For example, checking if there is a route between City A and City B.
 
 **Weighted Graphs** have edges with associated values (weights) representing distance, cost, time, or strength of connection. These are used for finding shortest paths, minimizing costs, and optimization problems. For example, finding the shortest distance route from City A to City B or the cheapest flight connection.
 
