@@ -2,7 +2,7 @@
 
 ## What is a Graph?
 
-A graph is a non-linear data structure consisting of vertices (representing individual data points or entities) and edges (the connections between them that represent relationships).
+A graph is a non-linear data structure consisting of vertices (nodes) and edges, where vertices represent entities and edges represent relationships between them.
 
 ### Key Distinctions
 
@@ -409,73 +409,4 @@ Graphs are useful because they:
 - allow efficient traversal and pathfinding
 - can represent both simple and complex systems
 
-This makes them a flexible and powerful data structure for many real-world problems.
-
-## Traversal Concepts (BFS vs DFS)
-
-Graph traversal refers to the process of visiting vertices in a graph in a systematic way.
-
-Two common traversal algorithms are **Breadth-First Search (BFS)** and **Depth-First Search (DFS)**.
-
----
-
-### Breadth-First Search (BFS)
-
-BFS explores the graph **level by level**, starting from a chosen vertex.
-
-It uses a **queue (FIFO)** to keep track of which vertex to visit next.
-
-Steps:
-1. Start at the initial vertex
-2. Visit all its immediate neighbours
-3. Then visit neighbours of those vertices
-4. Continue until all reachable vertices are visited
-
-**Key properties:**
-- Visits vertices in order of distance from the start
-- Finds the **shortest path (in number of edges)** in unweighted graphs
-
----
-
-### Depth-First Search (DFS)
-
-DFS explores the graph by going **as deep as possible** before backtracking.
-
-It uses a **stack** (or recursion) to track traversal.
-
-Steps:
-1. Start at the initial vertex
-2. Visit one neighbour
-3. Continue exploring deeper along that path
-4. Backtrack when no unvisited neighbours remain
-
-**Key properties:**
-- Explores full paths before moving to others
-- Does not guarantee shortest path
-- Useful for exploring all possible paths or detecting cycles
-
----
-
-### Key Differences
-
-| Feature | BFS | DFS |
-|--------|-----|-----|
-| Structure | Queue (FIFO) | Stack / recursion |
-| Exploration | Level-by-level | Deep exploration |
-| Shortest path | Yes (unweighted graphs) | No guarantee |
-| Memory usage | Higher | Lower (typically) |
-
----
-
-### Why This Matters
-
-The choice of traversal algorithm affects how a graph is explored:
-
-- **BFS** is used when the shortest path is required in unweighted graphs  
-- **DFS** is used when exploring all possible paths or structures  
-
-In this project:
-- BFS is used to check connectivity and shortest paths  
-- DFS is used to explore graph structure  
-
-These algorithms form the basis of the graph operations implemented in Section 2.
+This makes them a flexible and powerful data structure for many real-world problems. They also allow the application of standard algorithms (such as BFS, DFS, and shortest path algorithms), making them highly practical.
