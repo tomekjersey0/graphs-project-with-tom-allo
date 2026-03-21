@@ -8,6 +8,8 @@ def bfs(g: graph.GraphList, start: str) -> list[str]:
     if not g.find_vertex(start):
         return []
 
+    # Using a dictionary instead of a set to preserve visitation order
+    # (Python dicts maintain insertion order)
     visited: dict[str, Any] = {start: None}
     q = deque([start])
 
