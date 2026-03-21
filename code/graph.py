@@ -1,7 +1,7 @@
 from typing import Any
 from collections import deque
 
-# This  implementation represents a directed / unweighted graph 
+# This  implementation represents a directed, unweighted graph 
 class GraphList:
     """
     Adjacency list representation of a directed graph.
