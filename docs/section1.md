@@ -4,7 +4,9 @@
 
 A graph is a data structure consisting of vertices, which are individual data points or entities, and edges, which are connections between vertices that represent relationships.
 
-Graphs differ from binary trees and linked lists because each vertex can connect to multiple other vertices with multiple edges between them, creating more complex relationships.
+Graphs differ from Trees or Linked Lists. Where a Tree is a strictly hierarchical structure with a single root and no cycles, a Graph is a more general network where any vertex can connect to any other, allowing for multiple paths, cycles, and even self-loops.
+
+While a Linked List is a linear sequence where each vertex point to exactly one successor, a graph is a nonlinear network where any vertex can connect to multiple others, forming complex paths and cycles. 
 
 ## Directed vs Undirected Graphs
 
