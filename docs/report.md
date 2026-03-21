@@ -1,5 +1,7 @@
 # Graphs Project Report
 
+This report explores the theory, implementation, and evaluation of graph data structures and traversal algorithms, including Breadth-First Search (BFS) and Depth-First Search (DFS).
+
 ## Section 1: Understanding Graphs
 
 ### What is a Graph?
