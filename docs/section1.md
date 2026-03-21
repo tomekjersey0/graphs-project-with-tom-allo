@@ -6,10 +6,10 @@ A graph is a non-linear data structure consisting of vertices (representing indi
 
 ### Key Distinctions
 ### Graphs vs. Trees
-Graphs differ from Trees or Linked Lists. Where a Tree is a strictly hierarchical structure with a single root and no cycles, a Graph is a more general network where any vertex can connect to any other, allowing for multiple paths, cycles, and even self-loops.
+A tree is a restricted type of graph with a hierarchical structure, no cycles, and a single root. In contrast, a general graph has no such restrictions and may contain cycles and multiple paths between vertices.
 
 ### Graphs vs. Linked Lists
-While a Linked List is a linear sequence where each vertex point to exactly one successor, a graph is a nonlinear network where any vertex can connect to multiple others, forming complex paths and cycles. 
+A linked list is a linear structure where each vertex typically connects to a single next element, forming a simple chain rather than a network.
 
 ## Directed vs Undirected Graphs
 
@@ -209,7 +209,7 @@ This matches the behaviour of a **directed graph**.
 
 <img src="images/directed_graph_example.png" width="400"/>
 
-This diagram shows that edges have direction (e.g. A → B but not B → A), matching the adjacency list where connections are only stored in one direction.
+This diagram shows that edges have direction (e.g. A -> B but not B -> A), matching the adjacency list where connections are only stored in one direction.
 
 --- 
 
