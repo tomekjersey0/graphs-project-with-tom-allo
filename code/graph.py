@@ -63,7 +63,7 @@ class GraphList:
     # Checks if a vertex exists in the graph
     # Time complexity: O(1)
     def find_vertex(self, v: str) -> bool:
-        return True if v in self.graph else False
+        return v in self.graph
     
     # Checks if an edge exists in the graph
     # Time complexity: O(1)
