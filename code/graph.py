@@ -21,21 +21,25 @@ class GraphList:
 
     # Adds vertex V to the graph
     # If V already exists, adds nothing
+    # Time complexity: O(1)
     def add_vertex(self, v: str) -> None:
         self.graph.setdefault(v, dict())
 
     # Creates the vertex A if A does not exist
     # Also creates the vertex B if B does not exist
+    # Time complexity: O(1)
     def add_edge(self, a: str, b: str) -> None:
         self.graph.setdefault(a, dict())[b] = None
         self.add_vertex(b)
 
     # Removes the Edge A -> B if the edge exists
+    # Time complexity: O(1)
     def remove_edge(self, a: str, b: str) -> None:
         if a in self.graph and b in self.graph[a]:
             del self.graph[a][b]
 
     # Removes the vertex V and any edges pointing to it
+    # Time complexity: O(V + E)
     def remove_vertex(self, v: str) -> None:
         if v in self.graph:
             del self.graph[v]
@@ -44,6 +48,7 @@ class GraphList:
     # Removes any stale edges
     # If there are edges pointing to vertices that don't exist,
     # removes them from the graph
+    # Time complexity: O(V + E)
     def clean_graph(self) -> None:
         exist: set[str] = set(self.graph.keys())
 
@@ -58,14 +63,17 @@ class GraphList:
                 self.graph[v].pop(d)
 
     # Checks if a vertex exists in the graph
+    # Time complexity: O(1)
     def find_vertex(self, v: str) -> bool:
         return True if v in self.graph else False
     
     # Checks if an edge exists in the graph
+    # Time complexity: O(1)
     def find_edge(self, a: str, b: str) -> bool:
         return b in self.graph.get(a, {})
 
     # Checks if there exists a path between two vertices
+    # Time complexity: O(V + E)
     def path_exists_between(self, a: str, b: str) -> bool:
         if a not in self.graph or b not in self.graph:
             return False
