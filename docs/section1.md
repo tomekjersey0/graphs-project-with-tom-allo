@@ -176,10 +176,14 @@ graph = {
 ```
 
 In this representation:
-- edges are stored **in both direction**
+- edges are stored **in both directions**
 - if A is connected to B, then B is also connected to A
 
 This reflects the definition of an **undirected graph**
+
+<img src="images/undirected_graph_example.png" width="400"/>
+
+This diagram shows that each connection appears in both directions (e.g. A <--> B), matching how the adjacency list stores edges twice (A -> B and B -> A).
 
 --- 
 
@@ -203,6 +207,10 @@ Here:
 
 This matches the behaviour of a **directed graph**.
 
+<img src="images/directed_graph_example.png" width="400"/>
+
+This diagram shows that edges have direction (e.g. A → B but not B → A), matching the adjacency list where connections are only stored in one direction.
+
 --- 
 
 ### Weighted Graph
@@ -223,6 +231,10 @@ In this case:
 
 This allows for storing additional information such as distance or cost.
 
+<img src="images/weighted_graph_example.png" width="400"/>
+
+This diagram shows weights labelled on each edge (e.g. A → B has weight 2), matching the adjacency list where each neighbour is mapped to a numerical value instead of just being listed.
+
 ---
 
 ### Weighted and Directed Graph
@@ -242,22 +254,10 @@ This combines both concepts:
 - edges have direction
 - edges carry weights
 
+<img src="images/weighted_and_directed_graph_example.png" width="400"/>
+
+This diagram shows both direction and weight (e.g. A → B with weight 2), matching the adjacency list where edges are stored as key-value pairs and only exist in one direction.
 ---
-
-### Visual Representation
-
-The diagrams below show how graph structures can be visualised.
-
-- Vertices are represented as nodes
-- Edges are shown as lines (or arrows for directed graphs)
-
-<img src="images/graph.png" width="400" height="275"/>
-
-
-<img src="images/image.png" width="400" height="300"/>
-
-These visual representations correspond directly to the adjacency list structures shown above.
-
 
 ## Adjacency list vs Adjacency matrix
 
