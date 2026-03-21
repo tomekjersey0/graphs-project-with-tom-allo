@@ -2,6 +2,9 @@ import graph
 from collections import deque
 from typing import Any
 
+# BFS is used for shortest-path and reachability in unweighted graphs
+# DFS is used for full exploration of graph structure
+
 # return list of vertices in visitation order
 
 def bfs(g: graph.GraphList, start: str) -> list[str]:
